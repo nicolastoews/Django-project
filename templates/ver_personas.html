@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MVT+Toews</title>
 </head>
 <body>
     <h2>Listado de personas:</h2>
     {% for persona in personas %}
-        <li>{{persona.nombre}} {{persona.apellido}} {{persona.edad}}</li>
+        <ul>
+            <li>Nombre: {{persona.nombre}}</li>
+            <li>Apellido: {{persona.apellido}}</li>
+            <li>Edad: {{persona.edad}}</li>
+            <li>Fecha creación: {{persona.fecha_creacion}}</li>
+        </ul>
+        <p>-----</p>
     {% endfor %}
     
 </body>
