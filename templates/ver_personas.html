@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Template OK</h1>
+    <h2>Listado de personas:</h2>
+    {% for persona in personas %}
+        <li>{{persona.nombre}} {{persona.apellido}} {{persona.edad}}</li>
+    {% endfor %}
+    
 </body>
 </html>

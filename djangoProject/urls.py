@@ -19,8 +19,12 @@ from . import views #el punto indica que estamos importando desde la misma ubica
 
 urlpatterns = [
     path('hola/', views.hola),
-    path('hola/', views.fecha),
-    path('fecha-nac/<edad>', views.calcular_fecha_nac), #<edad> es informacion que viene de la pag
+    path('fecha/', views.fecha),
+    path('fecha-nac/<int:edad>', views.calcular_fecha_nac), #<edad> es informacion que viene de la pag
     path('template/', views.mi_template),
+    path('template/<str:nombre>', views.tu_template),
+    path('prueba-template/', views.prueba_template),
+    path('ver-personas/', views.ver_personas),
+    path('crear-persona/<str:nombre>/<str:apellido>/', views.crear_persona),#sacar los arguemtnos de nombre y apellido si sacamos los arg en crear_persona
     path('admin/', admin.site.urls),
 ]
