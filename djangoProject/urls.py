@@ -21,4 +21,6 @@ urlpatterns = [
     path('ver-personas/', views.ver_personas),
     path('crear-persona/', views.crear_persona),#sacar los arguemtnos de nombre y apellido si sacamos los arg en crear_persona
     path('admin/', admin.site.urls),
+    path('', views.ver_personas),
+
 ]
