@@ -14,17 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from . import views #el punto indica que estamos importando desde la misma ubicación en la que está este archivo
+from django.urls import path, include #include se agrega para vincular el archivo URLS de nuestra app a este urls
 
 urlpatterns = [
-    path('hola/', views.hola),
-    path('fecha/', views.fecha),
-    path('fecha-nac/<int:edad>', views.calcular_fecha_nac), #<edad> es informacion que viene de la pag
-    path('template/', views.mi_template),
-    path('template/<str:nombre>', views.tu_template),
-    path('prueba-template/', views.prueba_template),
-    path('ver-personas/', views.ver_personas),
-    path('crear-persona/<str:nombre>/<str:apellido>/', views.crear_persona),#sacar los arguemtnos de nombre y apellido si sacamos los arg en crear_persona
+    path('', include('home.urls')), # se agrega para vincular el archivo URLS de nuestra app a este urls. Se entiende como "Cuando no te ponga nada, vas a ir a home.urls"
     path('admin/', admin.site.urls),
+    #migradas las URLS al archivo URLS dentro de HOME porque cada app deberia tener sus URLS allí.
 ]

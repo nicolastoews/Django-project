@@ -1,0 +1,6 @@
+Se movió el archivo VIEWS de la carpeta principal (donde deberiamos tener solo las configs) a la carpeta HOME, con la refactorización correspondiente
+importamos django.shortcuts render
+Achicamos el metodo ver_personas y crear_personas
+Migradas las URLS al urls.py dentro de home
+
+Moved views: djangoProject > home. Import shortcuts render. Shrink ver_personas & crear_personas. Migrated urls to home app folder.
