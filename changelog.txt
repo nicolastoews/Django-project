@@ -2,5 +2,10 @@ Se movió el archivo VIEWS de la carpeta principal (donde deberiamos tener solo 
 importamos django.shortcuts render
 Achicamos el metodo ver_personas y crear_personas
 Migradas las URLS al urls.py dentro de home
-
+--commit 06a6f92
 Moved views: djangoProject > home. Import shortcuts render. Shrink ver_personas & crear_personas. Migrated urls to home app folder.
+
+-- last commit 
+created templates\home on home folder.
+Moved templates to app folder and edited settings.py to delete the 'DIRS': [BASE_DIR / 'templates']
+Added de home/... to the routs that needed it. EX: line 61 of home\views.py

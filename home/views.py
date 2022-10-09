@@ -18,7 +18,7 @@ def calcular_fecha_nac(request, edad):
     return HttpResponse(f'Tu año de nacimiento aproximada para tus {edad} años sería: {fecha}')
 
 def mi_template(request):
-    cargar_archivo = open(r'C:\Projects\Python\Coder\Django-project\templates\mi_template.html', 'r')#Puede generar error por lo que se cambió en linea 57 de settings.py donde le indicamos que busque los templates desde el directorio base.
+    cargar_archivo = open(r'C:\Projects\Python\Coder\Django-project\home\templates\mi_template.html', 'r')#Puede generar error por lo que se cambió en linea 57 de settings.py donde le indicamos que busque los templates desde el directorio base.
     template = Template(cargar_archivo.read())
     cargar_archivo.close()
     contexto = Context()
@@ -26,7 +26,7 @@ def mi_template(request):
     return HttpResponse(template_renderizado)
 
 def tu_template(request, nombre):
-    template = loader.get_template('tu_template.html')
+    template = loader.get_template('home/tu_template.html')
     template_renderizado = template.render({'persona': nombre})
     return HttpResponse(template_renderizado)
 
@@ -35,7 +35,7 @@ def prueba_template(request):
         'rango': list(range(1,11)),
         'valor_random': random.randrange(1,11)
     }
-    template = loader.get_template('prueba_template.html')
+    template = loader.get_template('home/prueba_template.html')
     template_renderizado = template.render(mi_contexto)
     return HttpResponse(template_renderizado)
 
@@ -49,7 +49,7 @@ def crear_persona(request, nombre, apellido):#sacar param nom y apell
     # template_renderizado = template.render({'persona': persona})#sacar el diccionario si sacamos los parametros
     # return HttpResponse(template_renderizado)
     
-    return render(request,'crear_persona.html', {'persona': persona}) #new, reemplaza las 3 lineas de arriba
+    return render(request,'home/crear_persona.html', {'persona': persona}) #new, reemplaza las 3 lineas de arriba
 
 def ver_personas(request):
     personas = Persona.objects.all #trae todos los objetos de Persona que estén en la DB
@@ -58,4 +58,4 @@ def ver_personas(request):
     # template_renderizado = template.render({'personas': personas})
     # return HttpResponse(template_renderizado)
     
-    return render(request, 'ver_personas.html', {'personas': personas}) #new, reemplaza las 3 lineas de arriba
+    return render(request, 'home/ver_personas.html', {'personas': personas}) #new, reemplaza las 3 lineas de arriba

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'djangoProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ BASE_DIR / 'templates'], #Le decimos que el template está en la dirección BASE (donde está el proyecto guardado)
+        'DIRS': [], #se borro el BASE_DIR / 'templates' porque movimos los templates a la carpeta de la app
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
