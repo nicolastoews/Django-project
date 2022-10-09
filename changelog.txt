@@ -5,7 +5,14 @@ Migradas las URLS al urls.py dentro de home
 --commit 06a6f92
 Moved views: djangoProject > home. Import shortcuts render. Shrink ver_personas & crear_personas. Migrated urls to home app folder.
 
--- last commit 
+-- commit 5bafbd3
 created templates\home on home folder.
 Moved templates to app folder and edited settings.py to delete the 'DIRS': [BASE_DIR / 'templates']
 Added de home/... to the routs that needed it. EX: line 61 of home\views.py
+
+-- Last commit 
+Added bootstrap template on static folder
+Added path('', views.index), on urls.py
+Added def index() on views.py
+Moved index.html from static to templates.
+Added {% load static %} & <link href={% static 'css/styles.css' %} rel="stylesheet" /> to index.html

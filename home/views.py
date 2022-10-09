@@ -59,3 +59,6 @@ def ver_personas(request):
     # return HttpResponse(template_renderizado)
     
     return render(request, 'home/ver_personas.html', {'personas': personas}) #new, reemplaza las 3 lineas de arriba
+
+def index(request):
+    return render(request, 'home/index.html')
