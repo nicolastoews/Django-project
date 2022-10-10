@@ -7,7 +7,7 @@ import random
 from home.models import Persona
 
 def hola(request):
-    return HttpResponse('Django Project by Nikin')
+    return HttpResponse('<h1>Django Project by Nikin</h1>')
 
 def fecha(request):
     fecha_actual = datetime.now()

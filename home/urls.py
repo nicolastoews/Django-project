@@ -5,13 +5,13 @@ from django.urls import path
 from home import views #Le sacamos los .. ya que no son necesarios y es mejor indicarle a python que acceda al PAQUETE home y no a la carpeta. En el archivo SETTINGS le pusimos que HOME es una aplicacion, por lo que lo toma como paquete.
 
 urlpatterns = [
-    path('', views.index),
-    path('hola/', views.hola),
-    path('fecha/', views.fecha),
+    path('', views.index, name='index'),
+    path('hola/', views.hola, name='hola'),
+    path('fecha/', views.fecha, name='fecha'),
     path('fecha-nac/<int:edad>', views.calcular_fecha_nac), #<edad> es informacion que viene de la pag
-    path('template/', views.mi_template),
+    path('template/', views.mi_template, name='mi_template'),
     path('template/<str:nombre>', views.tu_template),
-    path('prueba-template/', views.prueba_template),
-    path('ver-personas/', views.ver_personas),
+    # path('prueba-template/', views.prueba_template),
+    path('ver-personas/', views.ver_personas, name='ver_personas'),
     path('crear-persona/<str:nombre>/<str:apellido>/', views.crear_persona),#sacar los arguemtnos de nombre y apellido si sacamos los arg en crear_persona   
 ]

@@ -17,5 +17,14 @@ Added def index() on views.py
 Moved index.html from static to templates.
 Added {% load static %} & <link href={% static 'css/styles.css' %} rel="stylesheet" /> to index.html
 
--- Last commit
+-- Commit 6760c6b
 Added <script src={% static '"js/scripts.js"' %}></script> on index.html
+
+-- Last commit
+Added super user with py manage createsuperuser
+Added admin.site.register(Persona) on admin.py
+Added def __str__(self): on models.py
+Added Hola, Fecha, Ver personas & Mi template links to navbar
+Added name= argument on urls.py and href={% url '...' %} to connect them on index.html navbar anchors
+Added index link on every template body (reminder that hola, fecha and mi_template are on views.py and I cannot add the index link), only added to ver_personas
+
