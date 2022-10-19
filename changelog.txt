@@ -33,5 +33,9 @@ Modified index.html, deleted some things
 Added HTML inheritance with the base.html (deleted head on index.html and added on base.html, and other things, same on ver_personas). Also added {% extends 'home/base.html' %} at the beginning of index.html and ver_personas.html.
 Added block on base.html
 
--- Last commit
+-- Commit e950fb8
 Fixed ver-personas error, changed fecha_nacimiento for fecha_creacion
+
+-- Last commit
+Added __str__ method on models.py
+Changes on index.html 
