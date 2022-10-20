@@ -36,6 +36,9 @@ Added block on base.html
 -- Commit e950fb8
 Fixed ver-personas error, changed fecha_nacimiento for fecha_creacion
 
--- Last commit
+-- Commit 2178768
 Added __str__ method on models.py
 Changes on index.html 
+
+-- Last commit
+Added forms

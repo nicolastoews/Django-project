@@ -5,5 +5,11 @@
 {% endblock title_pagina %}
 
 {% block mi_contenido %}
-<h1>Persona creada!</h1>
+<form action="{% url 'crear_persona' %}" method="POST">
+    {% csrf_token %}
+    <table>
+        {{formulario}}
+    </table>
+    <button>Crear</button>
+</form>
 {% endblock mi_contenido %}
